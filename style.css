@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --pale_blue:hsl(225, 100%, 94%);
+    --bright_blue: hsl(245, 75%, 52%);
+    --very_pale_blue: hsl(225, 100%, 98%);
+    --desaturated_blue: hsl(224, 23%, 55%);
+    --dark_blue: hsl(223, 47%, 23%);
+    --wd: 1440px;
+    --wm: 75px; 
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    position: absolute;
+    top:0; left: 0;
+    z-index: -1;
+    width:var(--wd);
+    height: 100%;
+    background: url(images/pattern-background-desktop.svg) no-repeat;
+    background-color: var(--pale_blue);
+    height: 100%;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 15px;
+    width: 450px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 8px 8px 2px var(--desaturated_blue);
+}
+
+.container .image img{
+    width: 100%;
+}
+
+.container .summary{
+    padding: 40px 50px 20px 50px;
+}
+
+.container .summary h1{
+    color: var(--dark_blue);
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.container .summary p{
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--desaturated_blue);
+}
+
+.container .plan{
+    background-color:var(--very_pale_blue);
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px;
+}
+
+.container .plan .image{
+    width: 20%;
+    height: auto;
+    float: left;
+}
+
+.container .image img{
+    width: 100%;
+}
+
+.container .plan .plan_details{
+    padding-left:20px;
+    text-align: left;
+    font-size: 16px;
+    float: left;
+}
+
+.container .plan .plan_details h2{
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 5px;
+    color: var(--dark_blue);
+}
+
+.container .plan .plan_details p{
+    color: var(--desaturated_blue);
+}
+
+.container .plan a{
+    font-weight: 700;
+    height: 48px;
+    line-height: 48px;
+    vertical-align: middle;
+    color: var(--bright_blue);
+    float: right;
+}
+
+.container .plan:after{
+    content: " ";
+    clear:both;
+    height: 0;
+    font-size: 0;
+    display: block;
+}
+
+.container .plan a:hover{
+    color: hsl(245, 83%, 68%);
+    text-decoration: none;
+}
+
+.container .action{
+    padding: 20px 50px 40px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .action button{
+    padding:10px;
+    text-align: center;
+    color: white;
+    font-weight:700;
+    border-radius: 15px;
+    background-color: var(--bright_blue);
+    font-family: 'Red Hat Display', sans-serif;
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: 0px 10px 10px 2px var(--pale_blue);
+}
+
+.container .action button:hover{
+    cursor: pointer;
+    background-color:hsl(245, 83%, 68%);
+}
+
+.container .action a{
+    text-decoration: none;
+    font-weight: 700;
+    color:var(--desaturated_blue);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* mobile size */
+@media screen and (max-width: 375px) {
+    body{
+        width: 375px;
+    }
+
+    .container{
+        width: 355px;
+    }
+
+}
