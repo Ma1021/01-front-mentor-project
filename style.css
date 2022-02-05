@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --pale_blue:hsl(225, 100%, 94%);
+    --bright_blue: hsl(245, 75%, 52%);
+    --very_pale_blue: hsl(225, 100%, 98%);
+    --desaturated_blue: hsl(224, 23%, 55%);
+    --dark_blue: hsl(223, 47%, 23%);
+    --wd: 1440px;
+    --wm: 75px; 
+}
+
+*{
+    margin:0;
+    padding:0;
+    font-weight: 500;
+}
+
+body{
+    position: relative;
+    top:0; left: 0;
+    z-index: -1;
+    max-width:var(--wd);
+    height: 100vh;
+    background: url(images/pattern-background-desktop.svg) no-repeat;
+    background-color: var(--pale_blue);
+    font-family: 'Red Hat Display', sans-serif; 
+    /* center text here instead of only container */
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    width: 450px;
+    overflow: hidden;
+    border-radius: 20px;
+    /* try to use max width instead of width */
+    max-width: 450px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 8px 20px var(--desaturated_blue);
+}
+
+.container .image img{
+    width: 100%;
+}
+
+.container .summary{
+    width: 77%;
+    margin: 40px auto 20px;
+}
+
+.container .summary h1{
+    color: var(--dark_blue);
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.container .summary p{
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--desaturated_blue);
+}
+
+.container .plan{
+    box-sizing: border-box;
+    background-color:var(--very_pale_blue);
+    border-radius: 20px;
+    width: 77%;
+    margin: 0 auto;
+    padding: 20px 25px;
+    display: grid;
+    grid-template-columns: 0.7fr 2fr 1fr;
+
+}
+
+.container .image img{
+    width: 100%;
+}
+
+.container .plan .plan_details{
+    align-self: center;
+    text-align: left;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.container .plan .plan_details h2{
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 5px;
+    color: var(--dark_blue);
+}
+
+.container .plan .plan_details p{
+    color: var(--desaturated_blue);
+}
+
+.container .plan a{
+    align-self: center;
+    font-weight: 700;
+    color: var(--bright_blue);
+    text-align: right;
+}
+
+.container .plan a:hover{
+    color:var(--desaturated_blue);
+    text-decoration: none;
+}
+
+.container .action{
+    margin: 20px auto 40px;
+    width: 77%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .action button{
+    padding:10px;
+    text-align: center;
+    color: white;
+    font-weight:700;
+    border-radius: 10px;
+    background-color: var(--bright_blue);
+    font-family: 'Red Hat Display', sans-serif;
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: 0px 10px 10px 2px var(--pale_blue);
+}
+
+.container .action button:hover{
+    cursor: pointer;
+    background-color:hsl(245, 83%, 68%);
+}
+
+.container .action a{
+    text-decoration: none;
+    font-weight: 700;
+    color:var(--desaturated_blue);
+}
+
+.container .action a:hover{
+    color: black;
+}
+
+.attribution {  
+    font-size: 11px; 
+    margin-bottom: 10px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* mobile size */
+@media screen and (max-width: 600px) {
+    .container{
+        width: 375px;
+    }
+
+}
