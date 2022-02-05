@@ -21,18 +21,18 @@ body{
     top:0; left: 0;
     z-index: -1;
     max-width:var(--wd);
-    max-height: 1056px;
+    height: 100vh;
     background: url(images/pattern-background-desktop.svg) no-repeat;
     background-color: var(--pale_blue);
     font-family: 'Red Hat Display', sans-serif; 
     /* center text here instead of only container */
     text-align: center;
+    display: grid;
+    place-items: center;
 }
 
 .container{
     width: 450px;
-    margin: 40px auto;
-    vertical-align: middle;
     overflow: hidden;
     border-radius: 20px;
     /* try to use max width instead of width */
